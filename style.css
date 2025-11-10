@@ -1,0 +1,172 @@
+:root{
+  --burgundy: #800020;
+  --beige: #F5F0E6;
+  --muted: #6b5b59;
+  --text: #2b2b2b;
+  --accent: #a02839;
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:linear-gradient(180deg, var(--beige) 0%, #fff 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout */
+.container{width:90%; max-width:var(--max-width); margin:0 auto;}
+
+/* Header */
+.site-header{
+  background:var(--burgundy);
+  color:var(--beige);
+  padding:12px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+.brand{margin:0; font-size:1rem; letter-spacing:1px; font-weight:700;}
+.main-nav{display:flex; gap:10px; align-items:center;}
+.main-nav a{
+  color:var(--beige);
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  opacity:0.95;
+}
+.main-nav a:hover{background:rgba(255,255,255,0.06)}
+.main-nav a.active{background:var(--beige); color:var(--burgundy);}
+
+/* Mobile nav */
+.nav-toggle{display:none; background:transparent; border:0; color:var(--beige); font-size:1.1rem}
+
+/* Hero */
+.hero{padding:48px 0;}
+.hero-grid{display:grid; grid-template-columns:1fr 320px; gap:28px; align-items:center;}
+.hero-text h2{margin:0; color:var(--muted); font-weight:500}
+.hero-text h3{margin:.2rem 0; color:var(--burgundy); font-size:1.6rem}
+.lead{margin-top:8px; color:var(--muted)}
+.cta-row{margin-top:18px; display:flex; gap:10px;}
+.btn{background:var(--burgundy); color:var(--beige); padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
+.btn-outline{background:transparent; border:2px solid var(--burgundy); color:var(--burgundy)}
+
+/* Hero card */
+.hero-card{background:rgba(255,255,255,0.9); border-radius:12px; padding:18px; box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.photo-placeholder{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:18px; border-radius:8px;background:linear-gradient(180deg,#fff,#f7f2ef)}
+.photo-placeholder.big{padding:30px}
+.contact-mini{list-style:none; padding:0; margin:10px 0 0 0; border-top:1px dashed #eee; margin-top:12px; padding-top:12px}
+.contact-mini li{display:flex; justify-content:space-between; padding:6px 0; font-size:.95rem}
+
+/* Quick links */
+.quick-links{display:flex; gap:12px; justify-content:center; margin:12px auto 48px; flex-wrap:wrap}
+.card-link{display:flex; gap:8px; align-items:center; background:var(--beige); padding:12px 14px; border-radius:10px; text-decoration:none; color:var(--burgundy); font-weight:700; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.card-link i{font-size:1.2rem}
+
+/* Page layout */
+.page{padding:36px 0}
+.about-grid{display:grid; grid-template-columns:280px 1fr; gap:28px; align-items:start}
+.about-photo .photo-placeholder{height:260px; display:flex; align-items:center; justify-content:center}
+.info-list{list-style:none; padding:0; margin:0 0 16px 0}
+.info-list li{padding:6px 0; border-bottom:1px dashed #eee}
+
+/* Skills */
+.skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; margin-top:18px}
+.skill{background:#fff; padding:14px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+.progress{background:#f3ece8; border-radius:999px; height:18px; overflow:hidden; margin-top:8px}
+.progress-bar{height:100%; background:linear-gradient(90deg,var(--burgundy),var(--accent)); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:flex-end; padding-right:8px; border-radius:999px; font-size:0.85rem}
+
+/* Timeline */
+.timeline{margin-top:18px}
+.timeline-item{display:flex; gap:16px; margin-bottom:18px}
+.timeline-date{width:90px; color:var(--muted)}
+.timeline-content{background:#fff; padding:12px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+
+/* Interests & projects */
+.interests-grid, .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+.interest-card, .project-card{background:#fff; padding:18px; border-radius:10px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+.thumbnail{height:120px; display:flex; align-items:center; justify-content:center; color:var(--burgundy)}
+
+/* Contact */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.contact-card{background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.contact-form label{display:block; margin-bottom:12px; font-weight:600}
+.contact-form input, .contact-form textarea{width:100%; padding:10px; border-radius:8px; border:1px solid #e6e0db; margin-top:6px}
+
+/* Footer */
+.site-footer{padding:18px 0; text-align:center; color:var(--muted); font-size:.95rem; background:transparent}
+
+/* small utilities */
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.lead{font-size:1rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-toggle{display:inline-block}
+  .main-nav{position:fixed; inset:auto 0 0 0; background:var(--burgundy); transform:translateY(100%); transition:transform .25s ease; flex-direction:column; padding:12px; gap:6px}
+  .main-nav.open{transform:translateY(0)}
+  .main-nav a{padding:12px; border-radius:6px}
+}
+
+/* Standardized slideshow box */
+.slideshow-container {
+  width: 300px;          /* you can adjust: try 250px or 350px */
+  height: 300px;         /* same height for all images */
+  position: relative;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hide all slides by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure images always fill perfectly */
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* keeps proportions, crops nicely */
+  border-radius: 15px;
+}
+
+/* Smooth fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Dots styling */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
